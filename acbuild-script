@@ -4,6 +4,6 @@ dependency add legeyda.com/centos7 --label version=0.2.6
 
 label add version 0.1.0
 
-run --insecure={{insecure}} --engine={{engine}} -- bash -c 'touch /var/lib/rpm/* && yum update && yum groupinstall "Development Tools" && yum clean all'
+run --insecure={{insecure}} --engine={{engine}} -- bash -c 'touch /var/lib/rpm/* && yum -y update && yum -y groupinstall "Development Tools" && yum -y clean all'
 
 write --overwrite {{output}}
